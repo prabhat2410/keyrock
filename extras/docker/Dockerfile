@@ -180,7 +180,7 @@ RUN rm -rf doc extras  && \
 #COPY config.js.template config.js
 
 # Run Idm Keyrock
-COPY docker-entrypoint.sh /opt/fiware-idm/docker-entrypoint.sh
+COPY /extras/docker/docker-entrypoint.sh /opt/fiware-idm/docker-entrypoint.sh
 #RUN chmod 755 /opt/fiware-idm/extras/docker/docker-entrypoint.sh
 RUN chmod 755 docker-entrypoint.sh
 
