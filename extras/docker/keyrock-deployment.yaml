@@ -7,7 +7,7 @@ metadata:
   labels:
   #  io.kompose.service: keyrock
   name: keyrock-pipeline
-  namespace: fiware
+ # namespace: fiware
 spec:
   replicas: 1
   strategy: {}
@@ -42,7 +42,8 @@ spec:
           value: http://localhost:3000
         - name: IDM_PORT
           value: "3000"
-        image: csp2-centos-1:5000/fiware-idm
+        #image: csp2-centos-1:5000/fiware-idm
+        image: 10.0.8.61:31484fiware-idm
         name: keyrock
         resources:
          limits:
