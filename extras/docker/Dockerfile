@@ -170,12 +170,12 @@ RUN rm -rf doc extras  && \
 # use the following commands to configure Keyrock, the database and add an entrypoint:
 #
 #COPY config_database.js  /opt/fiware-idm/extras/docker/config_database.js
-#COPY config.js.template  /opt/fiware-idm/extras/docker/config.js
+COPY config.js.template  /opt/fiware-idm/extras/docker/config.js
 #COPY docker-entrypoint.sh /opt/fiware-idm/docker-entrypoint.sh
 
 
 # Copy config database file
-COPY config_database.js extras/docker/config_database.js
+#COPY config_database.js extras/docker/config_database.js
 # Copy config file
 #COPY config.js.template config.js
 
