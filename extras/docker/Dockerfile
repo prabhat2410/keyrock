@@ -181,7 +181,8 @@ RUN rm -rf doc extras  && \
 
 # Run Idm Keyrock
 #COPY docker-entrypoint.sh /opt/fiware-idm/docker-entrypoint.sh
-RUN chmod 755 /opt/fiware-idm/extras/docker/docker-entrypoint.sh
+#RUN chmod 755 /opt/fiware-idm/extras/docker/docker-entrypoint.sh
+RUN chmod 755 extras/docker/docker-entrypoint.sh
 
 ENTRYPOINT ["/opt/fiware-idm/extras/docker/docker-entrypoint.sh"]
 
