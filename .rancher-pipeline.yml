@@ -12,7 +12,9 @@ stages:
       PLUGIN_INSECURE: "true"
       PLUGIN_STORAGE_PATH: /var/lib/docker2
     when:
-      event: {}
+      event:
+        include:
+        - tag
   when:
     event: {}
 - name: Deploy
