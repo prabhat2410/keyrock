@@ -175,9 +175,10 @@ RUN rm -rf doc extras  && \
 
 
 # Copy config database file
-#COPY config_database.js extras/docker/config_database.js
+COPY /extras/docker/config_database.js extras/docker/config_database.js
 # Copy config file
 #COPY config.js.template config.js
+COPY /extras/docker/config.js.template config.js
 
 # Run Idm Keyrock
 COPY /extras/docker/docker-entrypoint.sh /opt/fiware-idm/docker-entrypoint.sh
