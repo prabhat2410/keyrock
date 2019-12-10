@@ -1,21 +1,18 @@
-name: keyrock-pipeline
 stages:
 - name: Build
   steps:
   - publishImageConfig:
       dockerfilePath: extras/docker/Dockerfile
       buildContext: .
-      tag: fiware-idm
+      tag: fiware-idm:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: 10.0.8.61:31484
+      registry: 192.168.100.176:5000
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
       PLUGIN_STORAGE_PATH: /var/lib/docker2
     when:
-      event:
-        include:
-        - tag
+      event: {}
   when:
     event: {}
 - name: Deploy
