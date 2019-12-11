@@ -9,8 +9,8 @@ metadata:
     #field.cattle.io/targetWorkloadIds: '["deployment:fiware:keyrock"]'
   creationTimestamp: null
   labels:
-    cattle.io/creator: norman
-  name: keyrockserv-pipeline
+    #cattle.io/creator: norman
+  name: keyrockserv
  # namespace: fiware
  # selfLink: /api/v1/namespaces/p-bvfxs-pipeline/services/keyrockserv
 spec:
@@ -26,7 +26,7 @@ spec:
     targetPort: 3000
   selector:
   #  workloadID_keyrockserv: "true"
-    name: keyrock-pipeline
+    name: keyrock
   sessionAffinity: None
 status:
   loadBalancer: {}
