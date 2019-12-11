@@ -2,11 +2,11 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    kompose.cmd: kompose convert -f docker-compose.yml
-    kompose.version: 1.7.0 (HEAD)
+    #kompose.cmd: kompose convert -f docker-compose.yml
+   # kompose.version: 1.7.0 (HEAD)
   labels:
   #  io.kompose.service: keyrock
-  name: keyrock-pipeline
+  name: keyrock
  # namespace: fiware
 spec:
   replicas: 1
@@ -16,7 +16,7 @@ spec:
       creationTimestamp: null
       labels:
        # io.kompose.service: keyrock
-       name: keyrock-pipeline
+       name: keyrock
     spec:
       containers:
       - env:
