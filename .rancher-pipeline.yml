@@ -35,7 +35,9 @@ stages:
   steps:
   - runScriptConfig:
       image: python:latest
-      shellScript: sys.exit(1)
+      shellScript: |-
+        print "HI"
+        #sys.exit(1)
 timeout: 300
 notification:
   recipients:
