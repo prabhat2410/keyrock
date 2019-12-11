@@ -14,11 +14,7 @@ stages:
     when:
       event: {}
   when:
-    event:
-      include:
-      - pull_request
-      - push
-      - tag
+    event: {}
 - name: Deploy
   steps:
   - applyYamlConfig:
@@ -26,18 +22,7 @@ stages:
   - applyYamlConfig:
       path: extras/docker/keyrock-service.yaml
   when:
-    event:
-      include:
-      - pull_request
-      - push
-      - tag
-- name: test
-  steps:
-  - runScriptConfig:
-      image: python:latest
-      shellScript: |-
-        print "HI"
-        #sys.exit(1)
+    event: {}
 timeout: 300
 notification:
   recipients:
