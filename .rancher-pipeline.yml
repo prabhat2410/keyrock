@@ -24,11 +24,4 @@ stages:
   when:
     event: {}
 timeout: 300
-notification:
-  recipients:
-  - recipient: Ashima.Aggarwal@india.nec.com
-    notifier: c-h8ztd:n-4927h
-  condition:
-  - Success
-  - Changed
-  - Failed
+notification: {}
