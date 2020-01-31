@@ -96,7 +96,7 @@ config.usage_control = {
 
 // Database info
 config.database  = {
-    host:     (process.env.IDM_DB_HOST || 'localhost'),      
+    host:     (process.env.IDM_DB_HOST || 'mysqldb'),      
     password: (process.env.IDM_DB_PASS || 'Test@123'),
     username: (process.env.IDM_DB_USER || 'root'),
     database: (process.env.IDM_DB_NAME || 'idm_test'),
